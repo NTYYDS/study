@@ -1,0 +1,21 @@
+#include<stdio.h> 
+
+int GCD(int n, int m){
+	int r;
+	while(m%n){
+	    r = m%n;
+		m = n;
+		n = r;	
+	}
+	return n;
+}
+int main (){
+	int m, n;
+	printf("请输入m的值："); 
+	scanf("%d", &m);
+	printf("请输入n的值："); 	
+	scanf("%d", &n);
+	int k = GCD(m,n);
+	printf("%d和%d的最大公约数是%d", m, n, k);
+	return 0;
+}
