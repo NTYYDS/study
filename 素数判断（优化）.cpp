@@ -4,37 +4,40 @@
 int NombrePremier(int n){
 	int count;
 	if(n==1){
-		printf("1²»ÊÇËØÊı");
+		printf("1ä¸æ˜¯ç´ æ•°");
 		count++; 
 	}
 	else if(n==2){
-		printf("2ÊÇËØÊı");
+		printf("2æ˜¯ç´ æ•°");
 		count++; 
 	}
 	else if(n>2){
 		if(n%2==0){
-			printf("%d²»ÊÇËØÊı", n);
+			printf("%dä¸æ˜¯ç´ æ•°", n);
 		    count++;
 		}
 		else{
 			for(int i=3; i<=sqrt(n); i+=2){
 		        if(n%i == 0){
 			        count++;
-			        printf("%d²»ÊÇËØÊı", n);
+			        printf("%dä¸æ˜¯ç´ æ•°", n);
 		     	    break;
 		        }
 	        }
 		}
 	}
+	else{
+		printf("è¾“å…¥é”™è¯¯")
+		}
 	if(count==0){
-		printf("%dÊÇËØÊı",n);
+		printf("%dæ˜¯ç´ æ•°",n);
 	}
 	return 0;
 }
 
 int main (){
 	int m;
-	printf("ÇëÊäÈëmµÄÖµ:"); 
+	printf("è¯·è¾“å…¥mçš„å€¼:"); 
 	scanf("%d", &m);
 	NombrePremier(m);
 	return 0;
