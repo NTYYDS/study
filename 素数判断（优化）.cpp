@@ -27,7 +27,8 @@ int NombrePremier(int n){
 		}
 	}
 	else{
-		printf("输入错误")
+		printf("输入错误");
+		count++;
 		}
 	if(count==0){
 		printf("%d是素数",n);
