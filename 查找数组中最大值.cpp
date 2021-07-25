@@ -1,23 +1,20 @@
 #include<stdio.h> 
 
-
 int ChercheMax (int arr[], int sz){
-	int max = arr[0];//²»Ö±½ÓÁîmax=0ÊÇÒòÎªÒÔ·ÀÊı×éÖĞÔªËØ¶¼ÊÇ¸ºÊı ËùÒÔmaxÖ±½ÓÈ¡Êı×éµÄµÚÒ»¸öÔªËØ 
+	int max = arr[0];//ä¸ç›´æ¥ä»¤max=0æ˜¯å› ä¸ºä»¥é˜²æ•°ç»„ä¸­å…ƒç´ éƒ½æ˜¯è´Ÿæ•° æ‰€ä»¥maxç›´æ¥å–æ•°ç»„çš„ç¬¬ä¸€ä¸ªå…ƒç´  
 	for(int i=1; i<sz; i++){
 		if(max<arr[i]){
 			max = arr[i];
 		}
 	}
-	printf("Êı×éÖĞ×î´óÖµÎª:%d", max);
-	return 0;
+	return max;
 }
- 
  
 int main (){
 	int arr[] = {-1,-2,-3,-4,5,-6,-7};
-	int sz;
+	int sz, max;
 	sz = sizeof(arr)/sizeof(arr[0]);
-	ChercheMax(arr,sz);
+	max = ChercheMax(arr,sz);	
+	printf("æ•°ç»„ä¸­æœ€å¤§å€¼ä¸º:%d", max);
 	return 0;
-
 }
