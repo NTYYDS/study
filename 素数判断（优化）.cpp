@@ -1,7 +1,7 @@
 #include<stdio.h> 
 #include<math.h>
 
-int NombrePremier(int n){
+void NombrePremier(int n){
 	int count;
 	if(n==1){
 		printf("1不是素数");
@@ -33,7 +33,6 @@ int NombrePremier(int n){
 	if(count==0){
 		printf("%d是素数",n);
 	}
-	return 0;
 }
 
 int main (){
