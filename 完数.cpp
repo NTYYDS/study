@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-/*ÊäÈëÖµÈ·ÈÏÊÇ·ñÎªÍêÊı 
-int wanshu(int a){
+/*è¾“å…¥å€¼ç¡®è®¤æ˜¯å¦ä¸ºå®Œæ•° 
+void wanshu(int a){
 	int sum;
 	int i;
 	for(i=1; i<=a/2; i++){
@@ -10,20 +10,20 @@ int wanshu(int a){
 		}
 	}
 	if(sum==a){
-		printf("%dÊÇÍêÊı", a);
+		printf("%dæ˜¯å®Œæ•°", a);
 	}
 	else{
-		printf("%d²»ÊÇÍêÊı", a);
+		printf("%dä¸æ˜¯å®Œæ•°", a);
 		
 	}
-	return 0;
 }
+
 int main (){
 	int m;
-	printf("ÇëÊäÈëmµÄÖµ£º"); 
+	printf("è¯·è¾“å…¥mçš„å€¼ï¼š"); 
 	scanf("%d", &m);	
 	if(m<=0){
-		printf("ÊäÈë´íÎó"); 
+		printf("è¾“å…¥é”™è¯¯"); 
 	} 
 	wanshu(m);
 	return 0;
@@ -31,8 +31,8 @@ int main (){
 
 */
 
-//Ñ°ÕÒ·¶Î§ÄÚÍêÊı 
-int wanshu(int a){
+//å¯»æ‰¾èŒƒå›´å†…å®Œæ•° 
+void wanshu(int a){
 	int sum;
 	int i;
 	for(i=1; i<=a/2; i++){
@@ -41,15 +41,14 @@ int wanshu(int a){
 		}
 	}
 	if(sum==a){
-		printf("%dÊÇÍêÊı\n", a);
+		printf("%dæ˜¯å®Œæ•°\n", a);
 	}
-	sum = 0;//·Ç³£ÖØÒª£¡£¡ ĞèÒª½«sumÃ¿´ÎÇåÁã£¬·ñÔòsum»á²»¶ÏÀÛ¼Ó 
-	return 0;
+	sum = 0;//éå¸¸é‡è¦ï¼ï¼ éœ€è¦å°†sumæ¯æ¬¡æ¸…é›¶ï¼Œå¦åˆ™sumä¼šä¸æ–­ç´¯åŠ  
 }
 
 int main (){
 	int m, n;
-	printf("ÇëÈ·¶¨²éÕÒ·¶Î§£º"); 
+	printf("è¯·ç¡®å®šæŸ¥æ‰¾èŒƒå›´ï¼š"); 
 	scanf("%d", &m);
 	for(n=1; n<=m; n++){
 		wanshu(n);			
