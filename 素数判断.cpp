@@ -1,24 +1,23 @@
 #include<stdio.h> 
 #include<math.h> 
 
-int nombrepremier(int n){
+void nombrepremier(int n){
 	int count;
 	for(int i=2; i<=sqrt(n); i++){
 		if(n%i == 0){
 			count++;
-			printf("%d²»ÊÇËØÊý", n);
+			printf("%dä¸æ˜¯ç´ æ•°", n);
 			break;
 		}
 	}
 	if(count == 0){
-		printf("%dÊÇËØÊý",n);
+		printf("%dæ˜¯ç´ æ•°",n);
 	}
-	return 0;
 }
 
 int main (){
 	int m, n;
-	printf("ÇëÊäÈëmµÄÖµ£º"); 
+	printf("è¯·è¾“å…¥mçš„å€¼ï¼š"); 
 	scanf("%d", &m);
 	nombrepremier(m);
 	return 0;
