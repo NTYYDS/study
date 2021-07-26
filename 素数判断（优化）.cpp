@@ -1,45 +1,42 @@
 #include<stdio.h> 
 #include<math.h>
 
-void NombrePremier(int n){
-	int count;
+int NombrePremier(int n){
 	if(n==1){
-		printf("1不是素数");
-		count++; 
+		return 0;
 	}
 	else if(n==2){
-		printf("2是素数");
-		count++; 
+		return 1;
 	}
 	else if(n>2){
 		if(n%2==0){
-			printf("%d不是素数", n);
-		    count++;
+			return 0;
 		}
 		else{
 			for(int i=3; i<=sqrt(n); i+=2){
 		        if(n%i == 0){
-			        count++;
-			        printf("%d不是素数", n);
-		     	    break;
+		        	return 0;
 		        }
 	        }
 		}
 	}
-	else{
-		printf("输入错误");
-		count++;
-		}
-	if(count==0){
-		printf("%d是素数",n);
-	}
 }
 
 int main (){
-	int m;
+	int m, n;
+again:
 	printf("请输入m的值:"); 
 	scanf("%d", &m);
-	NombrePremier(m);
+	if(m<=0){
+		printf("输入错误,请重新输入\n"); 
+		goto again;	
+	}
+	n = NombrePremier(m);
+	if(n==0){
+		printf("%d不是素数", m);
+	}
+	else{
+		printf("%d是素数", m);
+	}
 	return 0;
 }
-
