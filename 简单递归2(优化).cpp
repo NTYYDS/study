@@ -14,7 +14,7 @@ int Fibonacci(int a){
 
 int main(){
 	int n, ret;
-	printf("ÇëÊäÈëÊı×Ö£º");
+	printf("è¯·è¾“å…¥æ•°å­—ï¼š");
 	scanf("%d", &n) ;
 	ret = Fibonacci(n);
 	printf("%d", ret);
