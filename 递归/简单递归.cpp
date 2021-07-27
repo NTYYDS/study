@@ -1,6 +1,6 @@
 #include<stdio.h> 
 
-//将输入的数字，通过空格拆分 例：1234-> 1 2 3 4  
+//灏嗚緭鍏ョ殑鏁板瓧锛岄�氳繃绌烘牸鎷嗗垎 渚嬶細1234-> 1 2 3 4  
 void chaifen(int a){
 	if(a>9){
 		chaifen(a/10);
@@ -10,7 +10,7 @@ void chaifen(int a){
 
 int main(){
 	int n;
-	printf("请输入数字：");
+	printf("璇疯緭鍏ユ暟瀛楋細");
 	scanf("%d", &n) ;
 	chaifen(n);
 	}
