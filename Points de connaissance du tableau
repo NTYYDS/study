@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+
+int main(){
+	int arr[] = {1,2,8,4,5,6,7,3,9,10};
+	printf("%p\n", arr);//L'adresse du premier élément
+	printf("%p\n", &arr[0]);//L'adresse du premier élément
+	printf("%p\n", &arr);//l'adresse du tableau
+	return 0;
+}
