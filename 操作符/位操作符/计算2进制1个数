@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(){
+    int a;
+    int count;
+    printf("输入数值：");
+    scanf("%d", &a);
+    for(int i = 0; i < 32; i++)
+    {
+        if((a >> i) & 1 == 1)
+        {
+            count++;
+        }
+    }
+    printf("%d", count);
+    return 0;
+}
