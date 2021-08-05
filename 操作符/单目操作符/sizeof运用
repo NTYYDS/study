@@ -11,8 +11,13 @@ int main(){
     printf("%d\n", sizeof(b));//1
     printf("%d\n", sizeof(char));//1
 
-     printf("%d\n", sizeof(arr));//40
+    printf("%d\n", sizeof(arr));//40
     printf("%d\n", sizeof(int [10]));//40
 
+    short s = 0;
+    a = 10;
+    printf("%d\n", sizeof(s = a + 5));//2
+    printf("%d\n", s);//0
+    
     return 0;
 }
