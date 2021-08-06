@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main(){
+    int a = 10;
+    printf("%d\n", ~a);//按位（2进制位）取反
+
+    //前后++的区别
+    printf("%d\n", a++);//10 输出后a变成11
+    printf("%d\n", ++a);//12
+
+    int b = (int)3.14; //强制类型转换
+
+    return 0;
+}
