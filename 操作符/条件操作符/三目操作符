@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main(){
+/*利用三目操作符实现
+    if(a > b){
+        int max = a;
+    }
+    else{
+        max = b;
+    }
+*/
+    int a = 3, b = 5;
+    int max = (a > b ? a : b);
+    printf("max=%d", max);
+    return 0;
+}
