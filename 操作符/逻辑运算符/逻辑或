@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+int main(){
+    int i;
+    int a = 1, b = 2, c = 3, d = 4;
+    i = a++ || ++b || d++;//由于先执行a后执行++，因此直接判定为真，||后面语句不执行
+    printf("a = %d\nb = %d\nc = %d\nd = %d\n", a, b, c, d);// 2 2 3 4
+    return 0;
+}
