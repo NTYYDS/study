@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int count_bit_1(int a){
+    int count;
+    while(a)
+    {
+        a = a & (a - 1);
+        count++;
+    }
+    return count;
+}
+
+int main(){
+    int a;
+    int count;
+    printf("输入数值：");
+    scanf("%d", &a);
+    count = count_bit_1(a);
+    printf("%d", count);
+    return 0;
+}
