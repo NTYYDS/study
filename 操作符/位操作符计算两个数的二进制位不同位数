@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int count_diff_bit(int a, int b){
+    int count;
+    int n = a ^ b;
+    while(n)
+    {
+        n = n & (n - 1);
+        count++;
+    }
+    return count;
+}
+
+int main(){
+    int a, b;
+    int count;
+    printf("输入两个数值：");
+    scanf("%d%d", &a, &b);
+    count = count_diff_bit(a,b);
+    printf("%d", count);
+    return 0;
+}
