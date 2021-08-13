@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+
+void change(char arr[]){
+    int right;
+    right = strlen(arr) - 1;
+    char tmp = arr[0];
+    arr[0] = arr[right];
+    arr[right] = '\0';
+    if(strlen (arr+1) >= 2){
+        change(arr+1);
+    }
+    arr[right] = tmp;
+}
+
+int main(){
+    char arr[] = "abcdef";
+    change(arr);
+    printf("%s", arr);
+    return 0;
+}
