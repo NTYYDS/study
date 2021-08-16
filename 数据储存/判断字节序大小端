@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+//判断机器字节序（大端小端）
+int check_sys(){
+    int a = 1;
+    // char *p = (char *)&a;
+    //return *p;
+    return *(char *)&a;
+}
+
+int main()
+{
+    int ret = check_sys();
+    if (ret == 0)
+    {
+        printf("小端\n");
+    }
+    else
+    {
+        printf("大端\n");
+    }
+    return 0;
+}
