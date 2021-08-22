@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+
+void change(char *str)
+{
+    assert(str);
+    int len = strlen(str);
+
+    char* right = str + len -1;
+    char* left = str;
+
+    while(left<right)
+    {
+    char tmp = *left;
+    *left = *right;
+    *right = tmp;
+    left++;
+    right--;
+    }
+}
+
+int main(){
+    char arr[] = "abcdef";
+    change(arr);
+    printf("%s", arr);
+    return 0;
+}
