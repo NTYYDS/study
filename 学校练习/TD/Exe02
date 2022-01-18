@@ -1,0 +1,13 @@
+# include <stdio.h>
+
+int main(){
+    int n = 0;
+    scanf("%d", &n);
+    if(n < 100){
+        printf("n est strictement inférieur à 100\n");
+    }
+    else{
+        printf("n est supérieur ou égal à 100\n");            
+    }
+    return 0;
+}
