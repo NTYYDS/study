@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    float a;
+    float b;
+    float c;
+    float d;
+    printf("saisir trois réels a, b et c\n");
+    printf("a = ");
+    scanf("%f", &a);
+    printf("b = ");
+    scanf("%f", &b);    
+    printf("c = ");
+    scanf("%f", &c);   
+    if (a == 0)
+    {
+        if (b == 0)
+        {
+            if (c == 0){
+                printf("Il y a une infinité de solutions");
+            }
+            else{
+                printf("Il n'y pas de solution");
+            }
+        }
+        else{
+            printf("La solution est -c/b %f", -c/b);
+        }
+    }
+    else{
+        d = b * b - 4*a*c;
+        if (d < 0)
+        {
+            printf("Il n'y pas de solution");
+        }
+        else if(d == 0){
+            printf("La solution est -b/2a %f", -b/(2*a));
+        }
+        else{
+            printf("La solution est  %f et %f", (sqrt(d) - b)/(2*a), (-b-sqrt(d))/(2*a));
+        }
+    }  
+    return 0;
+}
