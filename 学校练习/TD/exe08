@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+#define bool int
+#define true 1 
+#define false 0
+
+int main(){
+    bool loop = true;
+    const char *non = "n";
+    const char *oui = "o";
+    int count = 0;
+    int age = 0;
+    while(loop){
+        printf("Bonjour, je suis robot\n");
+        char answer[5] = "";//利用数组来进行比较
+        scanf("%c", &answer);
+        getchar();//防止scanf被跳过 用于吃掉\n（空格）
+        if(strcmp(answer,oui) == 0){
+            printf("Vous dtes avoir X ans");
+            scanf("%d", &age);
+            if (age < 0 || age > 120)
+            {
+            printf("enovoie en prise, car...\n");
+            }
+            else if (age < 18)
+            {
+            printf("envoie en prise cause de minorité\n");
+            }
+            else{
+                printf("pass");
+            }
+            loop = false;
+        }
+        else if(strcmp(answer,non) == 0){
+            printf("envoie en prise\n");
+            loop = false;
+        }
+        else{
+            printf("error\n"); 
+            count++;
+            if (count == 2){
+                printf("envoie en prise\n");
+                loop = false;
+            }
+        }
+    }
+    return 0;
+}
