@@ -1,0 +1,14 @@
+#include<stdio.h> 
+
+int main (){
+	int rang = 5;
+	int ligne = 5;
+	for(int i = 0; i <= rang; i++) {
+		for(int n = 0; n <= ligne; n++){
+			printf(" ");
+		}
+		printf("%d\n", ligne);
+		ligne--;
+	}
+	return 0;
+}
